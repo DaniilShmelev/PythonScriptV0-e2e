@@ -4,6 +4,7 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: print("Hello")
+
 - task: PythonScript@0
   displayName: 'Inline script with args'
   inputs:
@@ -12,6 +13,7 @@ steps:
       import sys
       assert sys.argv[1] == 'some' and sys.argv[2] == 'args'
     arguments: 'some args'
+
 - task: PythonScript@0
   displayName: 'Inline script with working dir'
   inputs:
@@ -20,6 +22,7 @@ steps:
       import os
       assert os.path.exists('some file.txt')
     workingDirectory: 'src/python-script/some dir'
+
 - task: PythonScript@0
   displayName: 'File script with args'
   inputs:

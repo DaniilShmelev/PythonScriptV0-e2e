@@ -4,13 +4,15 @@ jobs:
     vmImage: ubuntu-latest
   steps:
   - template: src/python-script/templates/python-script-steps.yml
-# - job: 'VS2019'
-#   pool:
-#     vmImage: windows-latest
-#   steps:
-#   - template: src/python-script/templates/python-script-steps.yml
-# - job: 'MacOS_Public_BigSur'
-#   pool:
-#     vmImage: macos-latest
-#   steps:
-#   - template: src/python-script/templates/python-script-steps.yml
+
+- job: 'VS2019'
+  pool:
+    vmImage: windows-latest
+  steps:
+  - template: src/python-script/templates/python-script-steps.yml
+
+- job: 'MacOS_Public_BigSur'
+  pool:
+    vmImage: macos-latest
+  steps:
+  - template: src/python-script/templates/python-script-steps.yml
