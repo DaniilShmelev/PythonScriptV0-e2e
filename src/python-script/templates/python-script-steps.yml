@@ -8,7 +8,9 @@ steps:
   displayName: 'Inline script with args'
   inputs:
     scriptSource: 'inline'
-    script: assert sys.argv[0] == 'some' and sys.argv[1] == 'args'
+    script: |
+      import sys
+      assert sys.argv[0] == 'some' and sys.argv[1] == 'args'
     arguments: 'some args'
 - task: PythonScript@0
   displayName: 'Inline script with working dir'
