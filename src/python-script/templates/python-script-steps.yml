@@ -10,7 +10,7 @@ steps:
     scriptSource: 'inline'
     script: |
       import sys
-      assert sys.argv[0] == 'some' and sys.argv[1] == 'args'
+      print(sys.argv)
     arguments: 'some args'
 - task: PythonScript@0
   displayName: 'Inline script with working dir'
