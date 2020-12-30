@@ -1,2 +1,2 @@
 import os.path
-assert path.is_file(some file.txt)
+assert path.is_file('some file.txt')
