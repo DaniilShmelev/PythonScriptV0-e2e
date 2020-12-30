@@ -1,2 +1,2 @@
-import os
-assert os.path.is_file(sys.argv[0])
+import os.path
+assert path.is_file(some file.txt)
