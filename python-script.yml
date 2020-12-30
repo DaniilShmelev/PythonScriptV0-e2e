@@ -41,8 +41,8 @@ jobs:
   steps:
   - template: src/python-script/templates/python-script-steps.yml
 
-- job: 'MacOS_Public_BigSur'
-  pool:
-    vmImage: macos-11.0
-  steps:
-  - template: src/python-script/templates/python-script-steps.yml
+# - job: 'MacOS_Public_BigSur'
+#   pool:
+#     vmImage: macos-11.0
+#   steps:
+#   - template: src/python-script/templates/python-script-steps.yml
