@@ -10,14 +10,14 @@ steps:
     scriptSource: 'inline'
     script: |
       import sys
-      print(sys.argv)
+      assert sys.argv[1] == 'some' and sys.argv[2] == 'args'
     arguments: 'some args'
 - task: PythonScript@0
   displayName: 'Inline script with working dir'
   inputs:
     scriptSource: 'inline'
     script: |
-      import os.path
+      import os
       assert os.path.is_file('some file.txt')
     workingDirectory: 'src/python-script/some dir'
 - task: PythonScript@0
