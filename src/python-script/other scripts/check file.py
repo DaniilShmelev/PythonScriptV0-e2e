@@ -1,2 +1,2 @@
-import os.path
-assert path.is_file('some file.txt')
+import os
+assert os.path.exists('some file.txt')

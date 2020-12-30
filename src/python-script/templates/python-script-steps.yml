@@ -17,8 +17,8 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: |
-      import os.path
-      assert path.is_file('some file.txt')
+      import os
+      assert os.path.exists('some file.txt')
     workingDirectory: 'src/python-script/some dir'
 - task: PythonScript@0
   displayName: 'File script with args'
